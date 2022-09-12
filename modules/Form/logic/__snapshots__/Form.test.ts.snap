@@ -1,0 +1,325 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Form.logic.ts/moveTo moveTo should move from index: 3 / id: 3 to index: 1 / id: 3 1`] = `
+[
+  {
+    "id": "0",
+    "type": "binaryButton",
+    "value": {
+      "currentValue": "true",
+      "defaultValue": "false",
+      "id": "0.0",
+      "inputType": "binaryButton",
+      "label": "question 0",
+      "lastModifiedTime": "",
+      "lastModifiedUserId": "",
+      "permission": "",
+    },
+  },
+  {
+    "id": "3",
+    "type": "mediaUpload",
+    "value": {
+      "currentValue": "image1",
+      "defaultValue": "",
+      "id": "0.3",
+      "inputType": "mediaUpload",
+      "label": "question 3",
+      "lastModifiedTime": "",
+      "lastModifiedUserId": "",
+      "permission": "",
+    },
+  },
+  {
+    "id": "1",
+    "type": "binaryButton",
+    "value": {
+      "currentValue": "true",
+      "defaultValue": "false",
+      "id": "0.1",
+      "inputType": "binaryButton",
+      "label": "question 1",
+      "lastModifiedTime": "",
+      "lastModifiedUserId": "",
+      "permission": "",
+    },
+  },
+  {
+    "id": "4",
+    "type": "text",
+    "value": {
+      "currentValue": "text",
+      "defaultValue": "",
+      "id": "0.4",
+      "inputType": "mediaUpload",
+      "label": "question 3",
+      "lastModifiedTime": "",
+      "lastModifiedUserId": "",
+      "permission": "",
+    },
+  },
+]
+`;
+
+exports[`Form.logic.ts/moveTo moveTo should move from index: 3 / id: 3 to index: 1 / id: 3 2`] = `
+[
+  {
+    "id": "0",
+    "type": "binaryButton",
+    "value": {
+      "currentValue": "true",
+      "defaultValue": "false",
+      "id": "0.0",
+      "inputType": "binaryButton",
+      "label": "question 0",
+      "lastModifiedTime": "",
+      "lastModifiedUserId": "",
+      "permission": "",
+    },
+  },
+  {
+    "id": "3",
+    "type": "mediaUpload",
+    "value": {
+      "currentValue": "image1",
+      "defaultValue": "",
+      "id": "0.3",
+      "inputType": "mediaUpload",
+      "label": "question 3",
+      "lastModifiedTime": "",
+      "lastModifiedUserId": "",
+      "permission": "",
+    },
+  },
+  {
+    "id": "1",
+    "type": "binaryButton",
+    "value": {
+      "currentValue": "true",
+      "defaultValue": "false",
+      "id": "0.1",
+      "inputType": "binaryButton",
+      "label": "question 1",
+      "lastModifiedTime": "",
+      "lastModifiedUserId": "",
+      "permission": "",
+    },
+  },
+  {
+    "id": "4",
+    "type": "text",
+    "value": {
+      "currentValue": "text",
+      "defaultValue": "",
+      "id": "0.4",
+      "inputType": "mediaUpload",
+      "label": "question 3",
+      "lastModifiedTime": "",
+      "lastModifiedUserId": "",
+      "permission": "",
+    },
+  },
+]
+`;
+
+exports[`Form.logic.ts/moveTo moveTo should move from index: 3 / id: 5 to index: 1 / id: 5 1`] = `
+[
+  {
+    "id": "0",
+    "type": "binaryButton",
+    "value": {
+      "currentValue": "true",
+      "defaultValue": "false",
+      "id": "0.0",
+      "inputType": "binaryButton",
+      "label": "question 0",
+      "lastModifiedTime": "",
+      "lastModifiedUserId": "",
+      "permission": "",
+    },
+  },
+  {
+    "id": "5",
+    "type": "text",
+    "value": {
+      "currentValue": "text",
+      "defaultValue": "",
+      "id": "0.5",
+      "inputType": "mediaUpload",
+      "label": "question 3",
+      "lastModifiedTime": "",
+      "lastModifiedUserId": "",
+      "permission": "",
+    },
+  },
+  {
+    "id": "1",
+    "type": "binaryButton",
+    "value": {
+      "currentValue": "true",
+      "defaultValue": "false",
+      "id": "0.1",
+      "inputType": "binaryButton",
+      "label": "question 1",
+      "lastModifiedTime": "",
+      "lastModifiedUserId": "",
+      "permission": "",
+    },
+  },
+  {
+    "id": "4",
+    "type": "text",
+    "value": {
+      "currentValue": "text",
+      "defaultValue": "",
+      "id": "0.4",
+      "inputType": "mediaUpload",
+      "label": "question 3",
+      "lastModifiedTime": "",
+      "lastModifiedUserId": "",
+      "permission": "",
+    },
+  },
+]
+`;
+
+exports[`Form.logic.ts/removeInput removeInput should remove id: 3 1`] = `
+[
+  {
+    "id": "0",
+    "type": "binaryButton",
+    "value": {
+      "currentValue": "true",
+      "defaultValue": "false",
+      "id": "0.0",
+      "inputType": "binaryButton",
+      "label": "question 0",
+      "lastModifiedTime": "",
+      "lastModifiedUserId": "",
+      "permission": "",
+    },
+  },
+  {
+    "id": "1",
+    "type": "binaryButton",
+    "value": {
+      "currentValue": "true",
+      "defaultValue": "false",
+      "id": "0.1",
+      "inputType": "binaryButton",
+      "label": "question 1",
+      "lastModifiedTime": "",
+      "lastModifiedUserId": "",
+      "permission": "",
+    },
+  },
+  {
+    "id": "4",
+    "type": "text",
+    "value": {
+      "currentValue": "text",
+      "defaultValue": "",
+      "id": "0.4",
+      "inputType": "mediaUpload",
+      "label": "question 3",
+      "lastModifiedTime": "",
+      "lastModifiedUserId": "",
+      "permission": "",
+    },
+  },
+]
+`;
+
+exports[`Form.logic.ts/removeInput removeInput should remove id: 3 2`] = `
+[
+  {
+    "id": "0",
+    "type": "binaryButton",
+    "value": {
+      "currentValue": "true",
+      "defaultValue": "false",
+      "id": "0.0",
+      "inputType": "binaryButton",
+      "label": "question 0",
+      "lastModifiedTime": "",
+      "lastModifiedUserId": "",
+      "permission": "",
+    },
+  },
+  {
+    "id": "1",
+    "type": "binaryButton",
+    "value": {
+      "currentValue": "true",
+      "defaultValue": "false",
+      "id": "0.1",
+      "inputType": "binaryButton",
+      "label": "question 1",
+      "lastModifiedTime": "",
+      "lastModifiedUserId": "",
+      "permission": "",
+    },
+  },
+  {
+    "id": "4",
+    "type": "text",
+    "value": {
+      "currentValue": "text",
+      "defaultValue": "",
+      "id": "0.4",
+      "inputType": "mediaUpload",
+      "label": "question 3",
+      "lastModifiedTime": "",
+      "lastModifiedUserId": "",
+      "permission": "",
+    },
+  },
+]
+`;
+
+exports[`Form.logic.ts/removeInput removeInput should remove id: 5 1`] = `
+[
+  {
+    "id": "0",
+    "type": "binaryButton",
+    "value": {
+      "currentValue": "true",
+      "defaultValue": "false",
+      "id": "0.0",
+      "inputType": "binaryButton",
+      "label": "question 0",
+      "lastModifiedTime": "",
+      "lastModifiedUserId": "",
+      "permission": "",
+    },
+  },
+  {
+    "id": "1",
+    "type": "binaryButton",
+    "value": {
+      "currentValue": "true",
+      "defaultValue": "false",
+      "id": "0.1",
+      "inputType": "binaryButton",
+      "label": "question 1",
+      "lastModifiedTime": "",
+      "lastModifiedUserId": "",
+      "permission": "",
+    },
+  },
+  {
+    "id": "4",
+    "type": "text",
+    "value": {
+      "currentValue": "text",
+      "defaultValue": "",
+      "id": "0.4",
+      "inputType": "mediaUpload",
+      "label": "question 3",
+      "lastModifiedTime": "",
+      "lastModifiedUserId": "",
+      "permission": "",
+    },
+  },
+]
+`;

@@ -1,0 +1,208 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`core-array.ts/add add should have length of 1 1`] = `
+[
+  {
+    "id": "0",
+    "value": 0,
+  },
+]
+`;
+
+exports[`core-array.ts/add add should have length of 2 1`] = `
+[
+  {
+    "id": "0",
+    "value": 0,
+  },
+  {
+    "id": "4",
+    "value": 4,
+  },
+]
+`;
+
+exports[`core-array.ts/add add should have length of 3 1`] = `
+[
+  {
+    "id": "0",
+    "value": 0,
+  },
+  {
+    "id": "1",
+    "value": 1,
+  },
+  {
+    "id": "3",
+    "value": 3,
+  },
+]
+`;
+
+exports[`core-array.ts/add add should insert the value on index 1 1`] = `
+[
+  {
+    "id": "1",
+    "value": 1,
+  },
+  {
+    "id": "0",
+    "value": 0,
+  },
+  {
+    "id": "4",
+    "value": 4,
+  },
+  {
+    "id": "3",
+    "value": 3,
+  },
+]
+`;
+
+exports[`core-array.ts/add add should insert the value on index 1 2`] = `
+[
+  {
+    "id": "1",
+    "value": 1,
+  },
+  {
+    "id": "2",
+    "value": 2,
+  },
+  {
+    "id": "3",
+    "value": 3,
+  },
+  {
+    "id": "4",
+    "value": 4,
+  },
+  {
+    "id": "5",
+    "value": 5,
+  },
+]
+`;
+
+exports[`core-array.ts/move move should move from index: 3 / id: 1 to index: 1 / id: 3 1`] = `
+[
+  {
+    "id": "3",
+    "value": 3,
+  },
+  {
+    "id": "0",
+    "value": 0,
+  },
+  {
+    "id": "1",
+    "value": 1,
+  },
+  {
+    "id": "1",
+    "value": 1,
+  },
+]
+`;
+
+exports[`core-array.ts/move move should move from index: 3 / id: 3 to index: 1 / id: 4 1`] = `
+[
+  {
+    "id": "4",
+    "value": 4,
+  },
+  {
+    "id": "0",
+    "value": 0,
+  },
+  {
+    "id": "1",
+    "value": 1,
+  },
+  {
+    "id": "3",
+    "value": 3,
+  },
+]
+`;
+
+exports[`core-array.ts/move move should move from index: 5 / id: 5 to index: 1 / id: 2 1`] = `
+[
+  {
+    "id": "2",
+    "value": 2,
+  },
+  {
+    "id": "0",
+    "value": 0,
+  },
+  {
+    "id": "1",
+    "value": 1,
+  },
+  {
+    "id": "3",
+    "value": 3,
+  },
+  {
+    "id": "4",
+    "value": 4,
+  },
+  {
+    "id": "5",
+    "value": 5,
+  },
+]
+`;
+
+exports[`core-array.ts/remove remove should remove id: 3 1`] = `
+[
+  {
+    "id": "0",
+    "value": 0,
+  },
+  {
+    "id": "1",
+    "value": 1,
+  },
+  {
+    "id": "4",
+    "value": 4,
+  },
+]
+`;
+
+exports[`core-array.ts/remove remove should remove id: 3 2`] = `
+[
+  {
+    "id": "0",
+    "value": 0,
+  },
+  {
+    "id": "1",
+    "value": 1,
+  },
+  {
+    "id": "4",
+    "value": 4,
+  },
+]
+`;
+
+exports[`core-array.ts/remove remove should remove id: 5 1`] = `
+[
+  {
+    "id": "0",
+    "value": 0,
+  },
+  {
+    "id": "1",
+    "value": 1,
+  },
+  {
+    "id": "4",
+    "value": 4,
+  },
+]
+`;

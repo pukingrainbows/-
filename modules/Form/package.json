@@ -1,0 +1,14 @@
+{
+  "name": "@pukingrainbows/modules-form",
+  "devDependencies": {
+    "@pukingrainbows/config-eslint-config-custom": "^0.0.0",
+    "@pukingrainbows/config-jest": "^0.0.0",
+    "@pukingrainbows/config-tsconfig": "^0.0.0",
+    "jest": "*"
+  },
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:update": "jest --updateSnapshot"
+  }
+}

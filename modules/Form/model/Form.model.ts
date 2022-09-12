@@ -29,9 +29,8 @@ export type NodeValue = {
 
 export interface Input {
   id: string;
-  position: number;
   type: InputTypes;
   value: NodeValue;
 }
 
-export type Form = Array<Input>;
+export type Inputs = Array<Input>;

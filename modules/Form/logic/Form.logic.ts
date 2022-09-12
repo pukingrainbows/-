@@ -1,69 +1,70 @@
-import { Form, Input } from "../model/Form.model";
+import {
+  add,
+  moveUp,
+  moveDown,
+  move,
+  remove,
+} from "@pukingrainbows/core-array";
 
-export type Move = ({
-  form,
-  fromIndex,
-  toIndex,
-}: {
-  form: Form;
+import { Input } from "../model/Form.model";
+
+type InputsParameters = {
+  inputs: Array<Input>;
+};
+
+type MoveInputDown = InputsParameters & { inputId: string };
+export const moveInputDown = (parameters: MoveInputDown) => {
+  const { inputs, inputId } = parameters;
+  return moveDown<Input>({
+    arrayList: inputs,
+    which: (input) => input.id === inputId,
+  });
+};
+
+type MoveInputUp = InputsParameters & { inputId: string };
+export const moveInputUp = (parameters: MoveInputUp) => {
+  const { inputs, inputId } = parameters;
+  return moveUp<Input>({
+    arrayList: inputs,
+    which: (input) => input.id === inputId,
+  });
+};
+
+export type MoveInputToParameters = InputsParameters & {
   fromIndex: number;
   toIndex: number;
-}) => Form;
-
-const move: Move = ({ form, fromIndex, toIndex }) => {
-  const cloneForm = form.slice(0);
-  var element = cloneForm[fromIndex];
-  cloneForm.splice(fromIndex, 1);
-  cloneForm.splice(toIndex, 0, element);
-  return cloneForm;
 };
 
-export type InputFn = ({
-  form,
-  inputId,
-}: {
-  form: Form;
-  inputId: string;
-}) => Form;
+export const moveInputTo = (parameters: MoveInputToParameters) => {
+  const { inputs, fromIndex, toIndex } = parameters;
 
-export const moveInputUp: InputFn = ({ form, inputId }) => {
-  const inputIndex = form.findIndex((input: Input) => input.id === inputId);
-  if (inputIndex > -1 && form.length - 1 <= inputIndex + 1) {
-    return move({ form, fromIndex: inputIndex, toIndex: inputIndex + 1 });
-  }
-
-  return form;
+  return move<Input>({
+    arrayList: inputs,
+    fromIndex,
+    toIndex,
+  });
 };
 
-export const moveInputDown: InputFn = ({ form, inputId }) => {
-  const inputIndex = form.findIndex((input: Input) => input.id === inputId);
-  if (inputIndex > -1 && inputIndex - 1 > 0) {
-    return move({ form, fromIndex: inputIndex, toIndex: inputIndex - 1 });
-  }
-
-  return form;
+type RemoveInput = InputsParameters & { inputId: string };
+export const removeInput = (parameters: RemoveInput) => {
+  const { inputs, inputId } = parameters;
+  return remove<Input>({
+    arrayList: inputs,
+    when(input) {
+      return input.id === inputId;
+    },
+  });
 };
 
-export const removeInput: InputFn = ({ form, inputId }) => {
-  return form.filter((input: Input) => input.id !== inputId);
-};
-
-export type AddInputFn = ({
-  form,
-  nextInput,
-  index,
-}: {
-  form: Form;
-  nextInput: Input;
+type AddInputParameters = InputsParameters & {
+  item: Input | Array<Input>;
   index?: number;
-}) => Form;
-
-export const addInput: AddInputFn = ({ form, nextInput, index }) => {
-  if (index) {
-    return [...form.slice(0), nextInput, ...form.slice(index)];
-  }
-
-  const cloneForm = form.slice(0);
-  cloneForm.push(nextInput);
-  return cloneForm;
+};
+export const addInput = (parameters: AddInputParameters) => {
+  const { inputs, item, index } = parameters;
+  return add<Input>({
+    arrayList: inputs,
+    item,
+    index,
+  });
 };
