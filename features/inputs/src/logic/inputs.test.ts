@@ -1,12 +1,12 @@
 import { describe, expect, test } from "@jest/globals";
-import { Input } from "../model/Form.model";
+import { Input } from "../model/inputs.model";
 import {
   addInput,
   moveInputDown,
   moveInputTo,
   moveInputUp,
   removeInput,
-} from "./Form.logic";
+} from "./inputs.logic";
 
 const input0: Input = {
   id: "0",

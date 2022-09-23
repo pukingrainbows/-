@@ -1,5 +1,5 @@
 import { describe, expect, test } from "@jest/globals";
-import { add, moveDown, moveUp, move, remove } from ".";
+import { add, moveDown, moveUp, move, remove, replace } from ".";
 
 type Value = {
   id: string;
@@ -167,5 +167,26 @@ describe.each([
     );
     expect(nextArrayList.length).toBe(3);
     expect(nextArrayList).toMatchSnapshot();
+  });
+});
+
+describe.each([
+  [[value0, value1, value3, value4, value5], value3.id, { id: "6", value: 6 }],
+  [[value0, value1, value3, value3], value1.id, { id: "7", value: 7 }],
+  [[value0, value1, value3, value5], value5.id, { id: "8", value: 8 }],
+])("core-array.ts/replace", (arrayList, whichId, expected) => {
+  test(`replace item with id ${whichId} by newer id: ${expected.id}`, () => {
+    const currentIndexValue = arrayList.findIndex(
+      (value) => value.id === whichId
+    );
+    const nextArrayList = replace({
+      arrayList,
+      nextItem: expected,
+      which(value) {
+        return value.id === whichId;
+      },
+    });
+
+    expect(nextArrayList[currentIndexValue].id).toBe(expected.id);
   });
 });

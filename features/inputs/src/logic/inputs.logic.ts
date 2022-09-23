@@ -4,9 +4,10 @@ import {
   moveDown,
   move,
   remove,
+  replace,
 } from "@pukingrainbows/core-array";
 
-import { Input } from "../model/Form.model";
+import { Input } from "../model/inputs.model";
 
 type InputsParameters = {
   inputs: Array<Input>;
@@ -66,5 +67,19 @@ export const addInput = (parameters: AddInputParameters) => {
     arrayList: inputs,
     item,
     index,
+  });
+};
+
+type ReplaceInputParameters = InputsParameters & {
+  nextItem: Input | Array<Input>;
+  which: (input: Input) => boolean;
+};
+
+export const replaceInput = (parameters: ReplaceInputParameters) => {
+  const { inputs, nextItem, which } = parameters;
+  return replace<Input>({
+    arrayList: inputs,
+    which,
+    nextItem,
   });
 };

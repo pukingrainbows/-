@@ -2,7 +2,7 @@ type ParameterArray<T> = {
   arrayList: Array<T>;
 };
 
-type MoveWhich<T> = {
+type Which<T> = {
   which: (Item: T, index: number, list: Array<T>) => boolean;
 };
 
@@ -72,7 +72,7 @@ export function move<T>(parameters: Move<T>) {
   return arrayList;
 }
 
-export type MoveUp<T> = ParameterArray<T> & MoveWhich<T>;
+export type MoveUp<T> = ParameterArray<T> & Which<T>;
 export function moveUp<T>(parameters: MoveUp<T>) {
   const { arrayList, which } = parameters;
   const index = arrayList.findIndex(which);
@@ -86,7 +86,7 @@ export function moveUp<T>(parameters: MoveUp<T>) {
   return arrayList;
 }
 
-export type MoveDown<T> = ParameterArray<T> & MoveWhich<T>;
+export type MoveDown<T> = ParameterArray<T> & Which<T>;
 export function moveDown<T>(parameters: MoveDown<T>) {
   const { arrayList, which } = parameters;
   const index = arrayList.findIndex(which);
@@ -96,6 +96,26 @@ export function moveDown<T>(parameters: MoveDown<T>) {
       fromIndex: index,
       toIndex: index + 1,
     });
+  }
+
+  return arrayList;
+}
+
+export type Replace<T> = ParameterArray<T> &
+  Which<T> & { nextItem: T | Array<T> };
+export function replace<T>(parameters: Replace<T>) {
+  const { arrayList, which, nextItem } = parameters;
+
+  if (nextItem) {
+    const items = Array.isArray(nextItem) ? nextItem : [nextItem];
+    const indexes = items.map(() => arrayList.findIndex(which));
+    const cloneArrayList = arrayList.slice(0);
+    indexes.forEach((index, i) => {
+      if (index > -1) {
+        cloneArrayList[index] = items[i];
+      }
+    });
+    return cloneArrayList;
   }
 
   return arrayList;

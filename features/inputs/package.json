@@ -1,5 +1,5 @@
 {
-  "name": "@pukingrainbows/modules-form",
+  "name": "@pukingrainbows/feature-inputs",
   "devDependencies": {
     "@pukingrainbows/config-eslint-config-custom": "^0.0.0",
     "@pukingrainbows/config-jest": "^0.0.0",

@@ -1,5 +1,5 @@
 {
-  "extends": "@pukingrainbows/config-tsconfig/base.json",
+  "extends": "@pukingrainbows/config-tsconfig/react-library",
   "include": ["**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
 }

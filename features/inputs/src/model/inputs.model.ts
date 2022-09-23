@@ -8,7 +8,7 @@ export type InputTypes =
   | "binaryButton"
   | "nodeTree";
 
-export type NodeValue = {
+export type Value = {
   id: string;
   currentValue: string | number;
   defaultValue: string | number;
@@ -30,7 +30,14 @@ export type NodeValue = {
 export interface Input {
   id: string;
   type: InputTypes;
-  value: NodeValue;
+  value: Value;
 }
 
-export type Inputs = Array<Input>;
+export interface Form {
+  id: string;
+  title: string;
+  description: string;
+  lastModifiedTime: string;
+  lastModifiedUserId: string;
+  inputs: Array<Input>;
+}
